@@ -1,11 +1,8 @@
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Example5 {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
 
         String str = """
                 Водитель Повар Строитель 
@@ -19,7 +16,7 @@ public class Example5 {
             System.out.println(s);
         }
 
-        List<String> result = sort(strings);
+        List<String> result = filter(strings);
         System.out.println("Строки после фильтрации:");
         for (String s : result){
             System.out.println(s);
@@ -27,7 +24,7 @@ public class Example5 {
 
     }
 
-    public static List<String> sort(List<String> list){
+    public static List<String> filter(List<String> list){
         System.out.println("Отфильтруем профессии с \"итель\"");
         return list.stream()
                 .filter(str -> str.contains("итель"))
