@@ -16,14 +16,14 @@ public class Example9 {
         }
 
         List<String> result = filter(strings);
-        System.out.println("Строки после фильтрации:");
+        System.out.println("Строки после фильтрации:\n");
         for (String s : result){
             System.out.println(s);
         }
     }
 
     public static List<String> filter(List<String> list){
-        System.out.println("Отфильтруем строки без цифр и символов");
+        System.out.println("\nОтфильтруем строки без цифр и символов");
         return list.stream()
                 .filter(str -> str.matches("\\p{L}+"))
                 .collect(Collectors.toList());

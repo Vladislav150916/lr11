@@ -17,7 +17,7 @@ public class Example5 {
         }
 
         List<String> result = filter(strings);
-        System.out.println("Строки после фильтрации:");
+        System.out.println("Строки после фильтрации:\n");
         for (String s : result){
             System.out.println(s);
         }
@@ -25,7 +25,7 @@ public class Example5 {
     }
 
     public static List<String> filter(List<String> list){
-        System.out.println("Отфильтруем профессии с \"итель\"");
+        System.out.println("\nОтфильтруем профессии с \"итель\"");
         return list.stream()
                 .filter(str -> str.contains("итель"))
                 .collect(Collectors.toList());

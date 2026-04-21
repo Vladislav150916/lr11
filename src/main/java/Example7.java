@@ -16,11 +16,11 @@ public class Example7 {
         for (String s : strings){
             System.out.println(s);
         }
-        System.out.println("Введите длину строки, по которой нужно отфильтровать:");
+        System.out.println("\nВведите длину строки, по которой нужно отфильтровать:");
         int length = in.nextInt();
 
         List<String> result = filter(strings, length);
-        System.out.println("Строки после фильтрации:");
+        System.out.println("Строки после фильтрации:\n");
         for (String s : result){
             System.out.println(s);
         }
